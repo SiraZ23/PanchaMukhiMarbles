@@ -84,7 +84,7 @@ namespace PanchaMukhiMarbles.API.Controllers
         [Route("{id:Guid}")]
         [ValidateModel]
 
-        public async Task<IActionResult> DeleteAsync([FromRoute] Guid id)
+        public async Task<IActionResult> DeleteAsync([FromRoute]Guid id)
         {
             var deltedProductDomainModel=await productRepository.DeleteAsync(id);
             if (deltedProductDomainModel == null)
